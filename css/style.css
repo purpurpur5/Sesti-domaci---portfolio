@@ -1,0 +1,244 @@
+/* -- Sadrzaj : 01. general
+				02. header
+				03. pages : 03.01 portfolio
+							03.02 o-meni;
+				04. footer
+				05. media query
+*/
+
+
+
+/* 01. general */
+
+* {
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Montserrat'
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	color: #800000;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.7;
+	text-decoration: underline;
+}
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.clearfix {
+	clear: both;
+} /* kraj 01 sekcije*/
+
+/* 02. header */
+
+header {
+	background-color: #D2B48C;
+	color: #876648;
+	padding: 20px 0 0;
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	padding: 30px 0;
+	background-color: #FFDEAD;
+}
+
+nav ul li {
+	display: inline;
+}
+
+nav ul li:nth-child(2) {
+	margin: 0 15px;
+}
+
+nav ul li a {
+	color: #876648;
+}
+
+.logo {
+	border-bottom: 0;
+	font-size: 20px;
+} /* kraj 02 sekcije*/
+
+/* 03. pages */
+
+.main-content {
+	padding: 50px 10px;
+}
+
+.selected {
+	text-decoration: underline;
+}
+
+/* 03.01 portfolio*/
+
+.projekat {
+	width: 100%;
+	max-width: 600px;
+	margin: 70px auto; /*?????????*/
+	background-color: #efefef;
+	border: 1px solid rgba(0,0,0,3);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.projekat img {
+	border-bottom: 1px solid rgba(0,0,0,3);
+}
+
+.projekat section {
+	padding: 30px;
+}
+
+.projekat section h1 {
+	font-size: 10px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.projekat section p {
+	font-size: 14px;
+} /*kraj 03.01 portfolio sekcije*/
+
+/* 03.02 o-meni*/
+
+.profile-photo {
+	display: block;
+	max-width: 150px;
+	margin:0 auto 50px;
+	border-radius: 50%;
+} /* kraj 03.02. o-meni sekcije*/
+
+
+/*03.03 kontakt */
+
+.kontakt-info {
+	margin-bottom: 70px;
+}
+
+.kontakt-detalji ul {
+	list-style: none;
+	padding: 0;
+}
+
+.kontakt-detalji ul li {
+	margin-bottom: 10px;
+}
+
+.kontakt-detalji ul li span {
+	margin-right: 10px;
+}
+
+
+/* 04. footer */
+
+footer {
+	text-align: center;
+}
+
+footer span {
+	font-size: 20px !important;
+}
+
+.facebook {
+	margin-right: 5px;
+}
+
+.instagram {
+	margin-left: 5px;
+}
+
+ /* 05. media query */
+
+@media screen and (min-width: 960px) {
+	header {
+		text-align: initial;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 0;
+		border-bottom: 3px solid #800000;
+	}
+
+	header h1,
+	header h2 {
+		display: inline-block;
+	}
+
+	nav {
+		float: right;
+	}
+
+	nav ul {
+		background-color: transparent;
+		margin-top: 0;
+		padding-top: 14px;
+	}
+
+	.logo {
+		margin-top: 12px;
+	}
+
+	.projekat {
+		width: 32%;
+		display: inline-block;
+	}
+
+	.projekat:nth-child(3n+2) {
+		margin-left: 1.7%;
+		margin-right: 1.7%;
+	}
+
+	.projekat section h1 {
+		font-size: 25px;
+	}
+
+	.projekat p {
+		font-size: 10px !important;
+	}
+
+	.profile-photo {
+		margin: 0 5% 80px 0;
+		float: left;
+	}
+
+	.kontakt-info {
+		width: 69%;
+	}
+
+	.kontakt-detalji {
+		width: 30%;
+		padding: 5%;
+		vertical-align: center;
+	}
+
+	.kontakt-info, 
+	.kontakt-detalji {
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.projekat:nth-child(3n+2) {
+		margin-left: 1.6%;
+		margin-right: 1.6%;
+	}
+}
